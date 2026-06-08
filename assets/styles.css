@@ -332,6 +332,38 @@ strong, .b { font-weight: 700; color: var(--tx); }
   color: var(--tx-mute); font-weight: 600;
 }
 
+/* ---------- Tarjeta de cita + análisis (deep-dive de imaginarios) ---------- */
+.qcard {
+  background: var(--bg-2); border: 1px solid var(--border); border-left: 3px solid var(--accent);
+  border-radius: 3px; padding: 17px 21px; display: flex; flex-direction: column; gap: 8px;
+}
+.qcard.i2 { border-left-color: var(--teal); }
+.qcard.i3 { border-left-color: var(--ochre); }
+.qcard.i4 { border-left-color: var(--indigo); }
+.qcard .qt { font-size: 18.5px; line-height: 1.34; color: var(--tx); font-weight: 500; letter-spacing: -0.01em; }
+.qcard .qt em { font-style: normal; color: var(--accent); font-weight: 600; }
+.qcard .qs { font-size: 13px; color: var(--tx-mute); font-weight: 600; }
+.qcard .qa { font-size: 15px; line-height: 1.42; color: var(--tx-2); }
+.qcard .qa b { color: var(--tx); font-weight: 600; }
+
+/* ---------- Caja de dimensión SIPC ---------- */
+.dimbox {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: 3px; padding: 15px 17px;
+  display: flex; flex-direction: column; gap: 5px; position: relative;
+}
+.dimbox .edge { position: absolute; left: -1px; right: -1px; top: -1px; height: 4px; border-radius: 3px 3px 0 0; }
+.dimbox .dn { font-size: 18px; font-weight: 700; color: var(--tx); letter-spacing: -0.015em; }
+.dimbox .de { font-size: 13px; color: var(--tx-mute); font-weight: 600; }
+.dimbox .dd { font-size: 14.5px; color: var(--tx-2); line-height: 1.32; }
+.bg-proj { background: var(--accent); } .bg-art { background: var(--ochre); } .bg-op { background: var(--neutral); }
+
+/* ---------- Banda interpretativa ---------- */
+.interp {
+  background: var(--bg-2); border: 1px solid var(--border); border-left: 4px solid var(--accent);
+  border-radius: 3px; padding: 16px 22px; font-size: 17px; line-height: 1.4; color: var(--tx-2);
+}
+.interp b { color: var(--tx); font-weight: 600; }
+
 /* ---------- Animación de entrada ---------- */
 .slide.active .anim { animation: rise .55s cubic-bezier(.2,.7,.2,1) both; }
 .slide.active .anim.d1 { animation-delay: .03s; }
