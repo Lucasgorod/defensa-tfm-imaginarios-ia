@@ -265,6 +265,11 @@
     deck = document.getElementById('deck');
     stage = document.getElementById('stage');
     slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+    // numeración de esquina dinámica (NN / total) — robusta a inserciones
+    slides.forEach(function (s, i) {
+      var el = s.querySelector('.slide-num-lg');
+      if (el) el.textContent = ('0' + (i + 1)).slice(-2) + ' / ' + ('0' + slides.length).slice(-2);
+    });
     renderCharts();
     scaleDeck();
     show(0);
