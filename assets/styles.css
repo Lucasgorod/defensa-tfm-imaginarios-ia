@@ -162,20 +162,8 @@ strong, .b { font-weight: 700; color: var(--tx); }
 .mt-a { margin-top: auto; }
 .head { display: flex; justify-content: space-between; align-items: flex-start; }
 
-/* ---------- Pie de slide (línea de fuente) ---------- */
-.foot {
-  position: absolute;
-  left: 76px; right: 76px; bottom: 24px;
-  display: flex; justify-content: space-between; align-items: center;
-  font-family: var(--sans);
-  font-size: 12.5px;
-  letter-spacing: 0.01em;
-  color: var(--tx-faint);
-  border-top: 1px solid var(--border);
-  padding-top: 11px;
-}
-.foot .src { font-style: normal; }
-.foot .mark { font-weight: 600; color: var(--tx-mute); font-size: 12.5px; letter-spacing: -0.005em; }
+/* ---------- Pie de slide (retirado en todas las slides) ---------- */
+.foot { display: none; }
 
 /* ---------- Slides destacadas (portada / conclusiones / cierre) ---------- */
 .slide.dark { background: var(--bg); }
