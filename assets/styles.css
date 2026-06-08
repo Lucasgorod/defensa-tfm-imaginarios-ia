@@ -357,6 +357,14 @@ strong, .b { font-weight: 700; color: var(--tx); }
 .dimbox .dd { font-size: 14.5px; color: var(--tx-2); line-height: 1.32; }
 .bg-proj { background: var(--accent); } .bg-art { background: var(--ochre); } .bg-op { background: var(--neutral); }
 
+/* ---------- Ficha de codificación completa ---------- */
+.ficha { display: flex; flex-direction: column; }
+.ficha .fr { display: flex; gap: 12px; padding: 7px 0; border-top: 1px solid var(--border-soft); align-items: baseline; }
+.ficha .fr:first-child { border-top: none; }
+.ficha .fk { flex: 0 0 142px; font-weight: 700; font-size: 14.5px; color: var(--tx); }
+.ficha .fv { flex: 1; font-size: 14.5px; color: var(--tx-2); line-height: 1.34; }
+.ficha .fv b { color: var(--accent); font-weight: 600; }
+
 /* ---------- Banda interpretativa ---------- */
 .interp {
   background: var(--bg-2); border: 1px solid var(--border); border-left: 4px solid var(--accent);
