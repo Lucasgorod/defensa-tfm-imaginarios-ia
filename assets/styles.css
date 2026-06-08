@@ -39,6 +39,10 @@
   --serif: 'Hanken', Arial, sans-serif;   /* alias → grotesco */
   --sans:  'Hanken', Arial, Helvetica, sans-serif;
 
+  /* alias de tokens antiguos (compatibilidad) */
+  --ink: #0b1f2a;
+  --ink-mute: #69707a;
+
   --stage-w: 1280px;
   --stage-h: 720px;
 }
@@ -93,15 +97,14 @@ body {
 /* ---------- Cabecera (tracker) ---------- */
 .kicker {
   font-family: var(--sans);
-  font-weight: 700;
-  font-size: 12.5px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-  display: flex; align-items: center; gap: 11px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: -0.005em;
+  color: var(--tx-2);
+  display: flex; align-items: center; gap: 10px;
 }
 .kicker::before {
-  content: ""; width: 22px; height: 3px;
+  content: ""; width: 9px; height: 9px; border-radius: 2px;
   background: var(--accent); display: inline-block;
 }
 .slide-num-lg {
@@ -118,7 +121,8 @@ h1, h2, h3 { font-family: var(--sans); font-weight: 700; line-height: 1.05; lett
 .t-xxl    { font-size: 66px;  font-weight: 800; line-height: 1.0;  letter-spacing: -0.03em; }
 .t-xl     { font-size: 54px;  font-weight: 750; line-height: 1.04; letter-spacing: -0.028em; }
 .t-lg     { font-size: 41px;  font-weight: 750; line-height: 1.08; letter-spacing: -0.022em;
-            padding-bottom: 14px; border-bottom: 2px solid var(--rule); }
+            padding-bottom: 16px; border-bottom: 1px solid var(--rule); position: relative; }
+.t-lg::after { content: ""; position: absolute; left: 0; bottom: -1px; width: 56px; height: 3px; background: var(--accent); }
 .t-md     { font-size: 30px;  font-weight: 500; line-height: 1.18; letter-spacing: -0.015em; }
 .serif-it { font-style: normal; font-weight: 700; }
 
@@ -171,7 +175,7 @@ strong, .b { font-weight: 700; color: var(--tx); }
   padding-top: 11px;
 }
 .foot .src { font-style: normal; }
-.foot .mark { font-weight: 700; color: var(--tx-mute); text-transform: uppercase; font-size: 11px; letter-spacing: 0.08em; }
+.foot .mark { font-weight: 600; color: var(--tx-mute); font-size: 12.5px; letter-spacing: -0.005em; }
 
 /* ---------- Slides destacadas (portada / conclusiones / cierre) ---------- */
 .slide.dark { background: var(--bg); }
@@ -206,7 +210,7 @@ strong, .b { font-weight: 700; color: var(--tx); }
 }
 .card .edge { position:absolute; left:-1px; right:-1px; top:-1px; height:4px; width:auto; border-radius:3px 3px 0 0; }
 .card h3 { font-size: 26px; font-weight: 700; }
-.card .tag { font-family: var(--sans); font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tx-mute); }
+.tag, .card .tag { font-family: var(--sans); font-weight: 700; font-size: 14px; letter-spacing: -0.005em; text-transform: none; color: var(--tx-mute); }
 
 /* ---------- Número-héroe ---------- */
 .bignum {
@@ -295,7 +299,7 @@ strong, .b { font-weight: 700; color: var(--tx); }
   border-radius: 3px; padding: 22px 26px;
   font-family: var(--sans); font-size: 24px; font-weight: 600; line-height: 1.3; letter-spacing: -0.02em;
 }
-.obj-general .lbl { font-family: var(--sans); font-style: normal; font-weight: 700; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #6fb2ff; display: block; margin-bottom: 9px; }
+.obj-general .lbl { font-family: var(--sans); font-style: normal; font-weight: 600; font-size: 14px; letter-spacing: 0; color: #7fb8ff; display: block; margin-bottom: 9px; }
 
 /* ---------- Ejemplo trabajado (pipeline) ---------- */
 .hl { background: rgba(23,99,196,0.14); color: var(--accent); font-weight: 700; padding: 0 5px; border-radius: 3px; }
@@ -311,7 +315,7 @@ strong, .b { font-weight: 700; color: var(--tx); }
   content: "→"; position: absolute; left: -30px; top: 44%; transform: translateY(-50%);
   color: var(--accent); font-size: 24px; font-family: var(--sans); font-weight: 700;
 }
-.step .stepn { font-family: var(--sans); font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tx-mute); }
+.step .stepn { font-family: var(--sans); font-weight: 700; font-size: 13.5px; letter-spacing: -0.005em; color: var(--accent); }
 .step .stept { font-family: var(--sans); font-weight: 700; font-size: 21px; color: var(--tx); line-height: 1.1; letter-spacing: -0.02em; }
 .codegrid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
 .codechip { font-family: var(--sans); font-size: 12.5px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 3px; padding: 7px 9px; line-height: 1.25; color: var(--tx-2); }
@@ -324,8 +328,8 @@ strong, .b { font-weight: 700; color: var(--tx); }
 .verdict.soft { background: var(--bg-2); color: var(--accent); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 3px; }
 
 .first-w {
-  font-family: var(--sans); font-size: 12px; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--tx-mute); font-weight: 700;
+  font-family: var(--sans); font-size: 14px; letter-spacing: 0;
+  color: var(--tx-mute); font-weight: 600;
 }
 
 /* ---------- Animación de entrada ---------- */
