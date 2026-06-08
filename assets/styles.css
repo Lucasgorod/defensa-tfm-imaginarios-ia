@@ -176,6 +176,11 @@ strong, .b { font-weight: 700; color: var(--tx); }
 .divider .drule { width: 64px; height: 4px; background: var(--accent); border-radius: 2px; }
 .divider .agenda { font-family: var(--sans); font-size: 22px; line-height: 1.42; color: var(--tx-mute); font-weight: 500; letter-spacing: -0.01em; }
 
+/* ---------- Declaración de IA · resaltado de diferencias ---------- */
+.hl { background: rgba(23,99,196,.13); color: var(--accent); font-weight: 600; border-radius: 3px; padding: 0 3px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-old { background: var(--bg-2); color: var(--tx-mute); border-radius: 3px; padding: 0 3px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.srcline { font-family: var(--sans); font-size: 13px; color: var(--tx-mute); letter-spacing: 0.005em; }
+
 /* ---------- Etiqueta de imaginario (tag cuadrado) ---------- */
 .chip {
   display: inline-flex; align-items: center; gap: 9px;
