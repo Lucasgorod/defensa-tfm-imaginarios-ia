@@ -5,7 +5,7 @@
   'use strict';
 
   /* ---------- Paleta de los imaginarios ---------- */
-  var PAL = { i1: '#1b4f8f', i2: '#2f7d6e', i3: '#b07d1a', i4: '#6e4a86' };
+  var PAL = { i1: '#0d4f9e', i2: '#1aa3bf', i3: '#e0a52e', i4: '#64708f' };
   var MARCO = '#c4c8cf';
 
   /* ===========================================================
