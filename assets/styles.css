@@ -181,6 +181,13 @@ strong, .b { font-weight: 700; color: var(--tx); }
 .slide.dark { background: var(--bg); }
 .slide.dark .foot { border-color: var(--border); }
 
+/* ---------- Slides separadoras de sección ---------- */
+.slide.divider { background: var(--bg-2); }
+.slide.divider .foot { border-color: var(--border); }
+.divider .dindex { font-family: var(--sans); font-weight: 700; font-size: 19px; letter-spacing: 0.01em; color: var(--accent); }
+.divider .drule { width: 64px; height: 4px; background: var(--accent); border-radius: 2px; }
+.divider .agenda { font-family: var(--sans); font-size: 22px; line-height: 1.42; color: var(--tx-mute); font-weight: 500; letter-spacing: -0.01em; }
+
 /* ---------- Etiqueta de imaginario (tag cuadrado) ---------- */
 .chip {
   display: inline-flex; align-items: center; gap: 9px;
