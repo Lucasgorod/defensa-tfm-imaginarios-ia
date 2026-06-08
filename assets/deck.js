@@ -184,7 +184,7 @@
   function scaleDeck() {
     var vw = window.innerWidth, vh = window.innerHeight;
     var sc = Math.min(vw / 1280, vh / 720);
-    deck.style.transform = 'scale(' + sc + ')';
+    deck.style.transform = 'translate(-50%, -50%) scale(' + sc + ')';
   }
 
   function show(n) {

@@ -89,7 +89,9 @@ body {
 #deck {
   width: var(--stage-w);
   height: var(--stage-h);
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
   transform-origin: center center;
   box-shadow: 0 40px 120px -30px rgba(0,0,0,0.7);
 }
@@ -311,6 +313,47 @@ strong, .b { font-weight: 600; color: var(--ink); }
   font-family: var(--sans); font-size: 12px; letter-spacing: 0.2em;
   text-transform: uppercase; color: var(--ink-mute); font-weight: 600;
 }
+
+/* ---------- Lista de objetivos / preguntas ---------- */
+.qlist { display: flex; flex-direction: column; gap: 14px; }
+.qitem { display: flex; gap: 18px; align-items: baseline; }
+.qitem .qn {
+  font-family: var(--serif); font-weight: 600; font-size: 26px; color: var(--carmine);
+  line-height: 1; flex: none; width: 52px; font-variant-numeric: tabular-nums;
+}
+.qitem .qt { font-family: var(--sans); font-size: 19px; line-height: 1.36; color: var(--ink-soft); }
+.qitem .qt b { color: var(--ink); font-weight: 600; }
+.obj-general {
+  background: var(--ink); color: var(--paper); border-radius: 12px; padding: 20px 26px;
+  font-family: var(--serif); font-size: 23px; font-style: italic; line-height: 1.28;
+}
+.obj-general .lbl { font-family: var(--sans); font-style: normal; font-weight: 600; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #E8896F; display: block; margin-bottom: 8px; }
+
+/* ---------- Ejemplo trabajado (pipeline metodológico) ---------- */
+.hl { background: rgba(178,58,46,0.13); color: var(--carmine); font-weight: 600; padding: 0 4px; border-radius: 4px; }
+.segment {
+  background: rgba(255,255,255,0.45); border: 1px solid var(--hair); border-left: 4px solid var(--carmine);
+  border-radius: 12px; padding: 20px 26px;
+  font-family: var(--serif); font-style: italic; font-size: 23px; line-height: 1.34; color: var(--ink);
+}
+.segment .seg-src { display: block; font-family: var(--sans); font-style: normal; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: var(--ink-mute); margin-top: 12px; }
+.steps { display: flex; align-items: stretch; gap: 44px; }
+.step { flex: 1; display: flex; flex-direction: column; gap: 12px; position: relative; }
+.step:not(:first-child)::before {
+  content: "→"; position: absolute; left: -32px; top: 46%; transform: translateY(-50%);
+  color: var(--carmine); font-size: 28px; font-family: var(--sans);
+}
+.step .stepn { font-family: var(--sans); font-weight: 600; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-mute); }
+.step .stept { font-family: var(--serif); font-weight: 600; font-size: 21px; color: var(--ink); line-height: 1.1; }
+.codegrid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.codechip { font-family: var(--sans); font-size: 12.5px; background: rgba(255,255,255,0.55); border: 1px solid var(--hair); border-radius: 7px; padding: 6px 9px; line-height: 1.25; }
+.codechip b { color: var(--carmine); font-weight: 700; }
+.codechip span { color: var(--ink-soft); }
+.verdict {
+  background: var(--carmine); color: #fff; border-radius: 10px; padding: 14px 18px;
+  font-family: var(--sans); font-weight: 600; font-size: 17px; display: flex; align-items: center; gap: 10px;
+}
+.verdict.soft { background: rgba(178,58,46,0.1); color: var(--carmine); border: 1px solid rgba(178,58,46,0.3); }
 .chart text { font-family: var(--sans); }
 .axis-label { font-size: 13px; fill: var(--ink-mute); font-weight: 500; }
 .val-label  { font-size: 15px; fill: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
