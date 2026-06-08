@@ -5,8 +5,8 @@
   'use strict';
 
   /* ---------- Paleta de los imaginarios ---------- */
-  var PAL = { i1: '#B23A2E', i2: '#1E6E6A', i3: '#C2851A', i4: '#41557F' };
-  var MARCO = '#8A8074';
+  var PAL = { i1: '#1b4f8f', i2: '#2f7d6e', i3: '#b07d1a', i4: '#6e4a86' };
+  var MARCO = '#c4c8cf';
 
   /* ===========================================================
      GRÁFICOS SVG (datos reales de la muestra analítica, N = 325)
@@ -57,7 +57,7 @@
       // operativo
       s += '<rect x="' + pw + '" y="' + y + '" width="' + ow + '" height="' + barH + '" rx="4" fill="' + MARCO + '" class="gx" style="transform-origin:' + pw + 'px center;transition-delay:.12s"/>';
       var oLabelX = pw + ow - 18;
-      s += '<text class="fadein" x="' + oLabelX + '" y="' + (y + barH / 2 + 8) + '" text-anchor="end" font-size="26" font-weight="700" fill="#fff">' + String(g.op).replace('.', ',') + ' %</text>';
+      s += '<text class="fadein" x="' + oLabelX + '" y="' + (y + barH / 2 + 8) + '" text-anchor="end" font-size="26" font-weight="700" fill="#2c2d33">' + String(g.op).replace('.', ',') + ' %</text>';
     });
     // leyenda
     var ly = top + 2 * (barH + gap) - gap + barH + 34;
@@ -156,8 +156,8 @@
     });
     var hgt = top + rows.length * rowH;
     // línea de media
-    s += '<line x1="' + meanX + '" y1="2" x2="' + meanX + '" y2="' + (hgt - 8) + '" stroke="#1B1714" stroke-width="2" stroke-dasharray="3 5" class="fadein"/>';
-    s += '<text class="fadein" x="' + (meanX + 8) + '" y="' + (hgt + 4) + '" font-size="14" font-weight="600" fill="#1B1714">media global 64,6 %</text>';
+    s += '<line x1="' + meanX + '" y1="2" x2="' + meanX + '" y2="' + (hgt - 8) + '" stroke="rgba(24,24,27,0.5)" stroke-width="2" stroke-dasharray="3 5" class="fadein"/>';
+    s += '<text class="fadein" x="' + (meanX + 8) + '" y="' + (hgt + 4) + '" font-size="14" font-weight="600" fill="#18181b">media global 64,6 %</text>';
     return svgWrap('1000 ' + (hgt + 16), s);
   }
 
